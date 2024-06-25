@@ -30,7 +30,7 @@ jobs:
       run: |
         # Rastgele bir bekleme süresi (1 dakika ile 55 dakika arasında)
         sleep $(( RANDOM % 3240 + 60 ))
-        python bot.py
+        python twitter_bot.py
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
