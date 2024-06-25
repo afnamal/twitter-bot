@@ -53,21 +53,14 @@ def generate_tweet():
     return tweet_text
 
 # Rastgele bir zaman diliminde tweet atma
-def tweet_at_random_time():
-    while True:
-        # 30 ile 60 dakika arasında rastgele bir zaman dilimi (saniye cinsinden)
-        wait_time = random.randint(1800, 3600)
-        print(f"{wait_time} saniye bekleniyor...")
+# Tweet atma
+def tweet():
+    try:
+        tweet_text = generate_tweet()
+        response = twitter_client.create_tweet(text=tweet_text)
+        print(f"Tweet atıldı! Tweet ID: {response.data['id']}")
+    except Exception as e:
+        print(f"Tweet atılırken hata oluştu: {e}")
 
-        # Belirlenen zaman dilimini bekle
-        time.sleep(wait_time)
-
-        # Tweet atma
-        try:
-            tweet_text = generate_tweet()
-            response = twitter_client.create_tweet(text=tweet_text)
-            print(f"Tweet atıldı! Tweet ID: {response.data['id']}")
-        except Exception as e:
-            print(f"Tweet atılırken hata oluştu: {e}")
 # Rastgele zaman diliminde tweet atma fonksiyonunu çağır
-tweet_at_random_time()
+tweet()
