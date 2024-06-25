@@ -27,8 +27,6 @@ jobs:
 
     - name: Run the bot with random delay
       run: |
-        # Rastgele bir bekleme süresi (1 dakika ile 55 dakika arasında)
-        
         python twitter_bot.py
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

@@ -62,9 +62,8 @@ def generate_tweet():
 
 # Rastgele bir zaman diliminde tweet atma
 def tweet_at_random_time():
-    while True:
-        # 30 ile 60 dakika arasında rastgele bir zaman dilimi (saniye cinsinden)
-        wait_time = random.randint(1, 3)
+        
+        wait_time = random.randint(10, 900)
         print(f"{wait_time} saniye bekleniyor...")
 
         # Belirlenen zaman dilimini bekle
