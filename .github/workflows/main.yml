@@ -1,0 +1,40 @@
+name: Twitter Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Her saat başında çalıştırır
+  workflow_dispatch:   # Manuel olarak çalıştırma özelliğini etkinleştirir
+  push:
+    branches:
+      - master
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run the bot with random delay
+      run: |
+        # Rastgele bir bekleme süresi (1 dakika ile 55 dakika arasında)
+        sleep $(( RANDOM % 3240 + 60 ))
+        python bot.py
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+        TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
