@@ -31,7 +31,16 @@ def select_random_prompt():
     prompts = [
         "Bir Fenerbahçe taraftarı gibi kısa bir tweet at: Fenerbahçe başkanı ali koça güvendiğini ve fenerbahçe teknik direktörü mourinhoyu öven sözler söyle, mourinhonun başarılarından bahsedebilirsin",
         "Fenerbahçe taraftarı olarak fenerbahçe tarihindeki bir başarıdan ya da bir rekordan övünerek kısa bir tweet at:",
-        "Galatasarayın TFF ve hakemler tarafından desteklendiğini ifade eden ve doğru karar veremeyen hakemlerin türk futboluna zarar verdiğini anlatan kısa bir tweet at:"
+        "Galatasarayın TFF ve hakemler tarafından desteklendiğini ifade eden ve doğru karar veremeyen hakemlerin türk futboluna zarar verdiğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak livakovicin ne kadar iyi kaleci olduğunu veya senin onu ne kadar sevdiğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak dusan tadicin ne kadar iyi olduğunu veya senin onu ne kadar sevdiğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak ferdinin ne kadar iyi olduğunu veya senin onu ne kadar sevdiğini veya avrupanın en büyük kulüplerinin onu transfer etmeyi ne kadar istediğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak fredin ne kadar iyi olduğunu veya senin onu ne kadar sevdiğini veya brezilyanın en büyük orta saha oyuncularından olduğunu veya türkiyede oynayan en iyi oyuncu olduğunu veya sana appiahı hatırlattığını anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak ismail yüksekin'in ne kadar iyi olduğunu veya senin onu ne kadar sevdiğini veya avrupanın en büyük kulüplerinin onu transfer etmeyi ne kadar istediğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak galatasarayın kadrosunda sorunlu isimlerin olduğunu bazı oyuncuların çok formsuz olduğunu ziyech, ndombili gibi isimlerin katkı sağlayacağını düşünmediğini anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak galatasaraylı icardinin eski günlerinden çok uzak olduğunu, türkiyede çok iyi idman yapamadığını anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak galatasarayın batshuayiyi isteme sebebinin icardiye güvenmemesi olduğunu anlatan kısa bir tweet at:",
+        "Fenerbahçe taraftarı olarak arda gülerin türkiyede yetişmiş en büyük oyuncu olduğunu ve fenerbahçenin bunun için verdiği büyük emeği anlatan kısa bir tweet at:"
     ]
     return random.choice(prompts)
 
